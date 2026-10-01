@@ -1,0 +1,72 @@
+{
+  "model_name": "ASSAC_SAR_Optical_Yield_Predictor_v1",
+  "version": "1.0.0",
+  "trained_on": "Assam Agro-Climatic Multi-Season Dataset",
+  "algorithm": "Ridge Multivariate Satellite-Agrometeorological Regressor",
+  "weights": [
+    3.25978176230274,
+    0.26179731348656793,
+    0.08597048125950846,
+    0.1455256531714186,
+    0.24668575954421268,
+    0.13054362567146843,
+    -0.03402973239991308,
+    -0.4672652184748059
+  ],
+  "feature_means": [
+    -14.525656256244782,
+    -10.10582301492671,
+    -4.419833241318078,
+    0.64006208266527,
+    0.4554389035742866,
+    1498.3127012147845,
+    3.28125
+  ],
+  "feature_stds": [
+    2.090956826571496,
+    1.7248378768823553,
+    2.7426211719006357,
+    0.1384593183334862,
+    0.11407797062547703,
+    352.4296235660399,
+    3.90166397461818
+  ],
+  "feature_importance": [
+    {
+      "feature": "Sentinel-1 SAR VH Backscatter (Biomass)",
+      "weight": 0.2618
+    },
+    {
+      "feature": "Sentinel-1 SAR VV Backscatter (Surface/Soil)",
+      "weight": 0.086
+    },
+    {
+      "feature": "SAR Polarimetric Ratio (VH/VV)",
+      "weight": 0.1455
+    },
+    {
+      "feature": "Sentinel-2 Optical NDVI (Green Canopy)",
+      "weight": 0.2467
+    },
+    {
+      "feature": "Sentinel-2 Optical NDRE (Red Edge Chlorophyll)",
+      "weight": 0.1305
+    },
+    {
+      "feature": "IMD Gridded Rainfall (Moisture)",
+      "weight": -0.034
+    },
+    {
+      "feature": "Flood Submergence Duration (Damage Penalty)",
+      "weight": -0.4673
+    }
+  ],
+  "validation_metrics": {
+    "rmse_mt_ha": 0.186,
+    "mae_mt_ha": 0.152,
+    "mape_pct": 5.06,
+    "r_squared": 0.912,
+    "ci95_margin_mt_ha": 0.363,
+    "std_error": 0.185
+  }
+}
